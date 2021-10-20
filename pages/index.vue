@@ -13,7 +13,36 @@
         />
       </article>
     </aside>
-    <div class="cv_content md:col-span-2 col-span-3 " />
+    <div class="cv_content rounded-2xl md:col-span-2 col-span-3 shadow-inner py-10 px-6 md:px-10">
+      <article>
+        <div class="py-5">
+          <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
+            {{ $t('home.aboutMe.title') }}
+          </h4>
+          <p class="leading-relaxed">
+            {{ $t('home.aboutMe.description') }}
+          </p>
+        </div>
+        <div class="border-t py-5 mt-10">
+          <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
+            {{ $t('home.experience.title') }}
+          </h4>
+          <p> {{ $t('home.aboutMe.description') }}</p>
+        </div>
+        <div class="border-t py-5 mt-10">
+          <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
+            {{ $t('home.ecucation.title') }}
+          </h4>
+          <p> {{ $t('home.aboutMe.description') }}</p>
+        </div>
+        <div class="border-t py-5 mt-10">
+          <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
+            {{ $t('home.projects.title') }}
+          </h4>
+          <p> {{ $t('home.aboutMe.description') }}</p>
+        </div>
+      </article>
+    </div>
   </div>
 </template>
 
@@ -38,7 +67,8 @@ export default {
         { key: 8, name: 'Css3' },
         { key: 9, name: 'API' },
         { key: 10, name: 'Sass' },
-        { key: 11, name: 'WebSocket' }
+        { key: 11, name: 'WebSocket' },
+        { key: 11, name: 'GIT' }
       ],
       languages: [
         { key: 0, percent: 80, name: 'English' },
