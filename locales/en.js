@@ -22,7 +22,14 @@ export default {
     },
     social: {
       title: 'SOCIAL'
-    }
-
+    },
+    aboutMe: {
+      title: 'ABOUTME'
+    },
+    experience: {
+      title: 'PROJECTS'
+    },
+    ecucation: { title: 'ECUCATION' },
+    projects: { title: 'PROJECTS' }
   }
 }
