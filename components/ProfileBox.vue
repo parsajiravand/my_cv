@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="w-52 h-52 rounded-full mx-auto" src="@/static/img/parsa-jiravand-min.jpg" alt="parsa jiravand">
+    <img class="w-40 h-40 rounded-full mx-auto" src="@/static/img/parsa-jiravand-min.jpg" alt="parsa jiravand">
     <h2 class="font-bold text-4xl text-blue-800 dark:text-white my-4">
       {{ $t('home.firstName') }}
 

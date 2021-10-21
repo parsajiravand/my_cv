@@ -50,7 +50,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome' // removee ittt
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -73,6 +73,7 @@ export default {
   // i18n module configuration
   i18n: {
     lazy: true,
+    defaultLocale: 'en',
     langDir: '~/locales/',
     locales: [
 
@@ -87,7 +88,6 @@ export default {
         dir: 'rtl'
       }
     ],
-    defaultLocale: 'en',
     strategy: 'no_prefix'
   },
 
