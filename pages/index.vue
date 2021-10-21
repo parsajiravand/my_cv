@@ -13,7 +13,7 @@
         />
       </article>
     </aside>
-    <div class="cv_content rounded-2xl md:col-span-2 col-span-3 shadow-inner py-10 px-6 md:px-10">
+    <div class="cv_content rounded-2xl md:col-span-2 col-span-3 shadow-inner  px-6 md:px-10">
       <article>
         <div class="py-5">
           <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
@@ -23,23 +23,55 @@
             {{ $t('home.aboutMe.description') }}
           </p>
         </div>
-        <div class="border-t py-5 mt-10">
-          <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
+        <div class=" py-5 mt-5">
+          <h4 class="font-normal text-2xl mb-8 text-blue-800 dark:text-white ">
             {{ $t('home.experience.title') }}
           </h4>
-          <p> {{ $t('home.aboutMe.description') }}</p>
+          <div v-for="(item,index) in $t('home.experience.items')" :key="index" class="mb-5 border p-5 rounded-2xl">
+            <p class="font-bold text-lg  text-blue-800 dark:text-white ">
+              {{ item.title }}
+            </p>
+            <p class="font-normal text-md mb-2 text-blue-700 dark:text-white ">
+              {{ item.job }}
+            </p>
+            <p>
+              {{ item.description }}
+            </p>
+            <p class="mt-5 font-medium">
+              {{ item.tech }}
+            </p>
+          </div>
         </div>
-        <div class="border-t py-5 mt-10">
+        <div class=" py-5 mt-5">
           <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
             {{ $t('home.ecucation.title') }}
           </h4>
-          <p> {{ $t('home.aboutMe.description') }}</p>
+          <div v-for="(item,index) in $t('home.ecucation.items')" :key="index" class="mt-8">
+            <p class="font-bold text-lg  text-blue-800 dark:text-white ">
+              {{ item.title }}
+            </p>
+            <p class="font-normal text-md mb-2 text-blue-700 dark:text-white ">
+              {{ item.time }}
+            </p>
+            <p>
+              {{ item.description }}
+            </p>
+          </div>
         </div>
-        <div class="border-t py-5 mt-10">
+        <div class=" py-5 mt-5">
           <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
             {{ $t('home.projects.title') }}
           </h4>
-          <p> {{ $t('home.aboutMe.description') }}</p>
+          <p class="mb-4">
+            {{ $t('home.projects.description') }}
+          </p>
+          <div v-for="(item,index) in $t('home.projects.items')" :key="index">
+            <a :href="item.url">
+              <p class="font-bold text-lg  text-blue-800 dark:text-blue-400 ">
+                <i class="fa fa-globe" /> {{ item.name }}
+              </p>
+            </a>
+          </div>
         </div>
       </article>
     </div>
