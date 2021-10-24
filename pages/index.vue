@@ -1,10 +1,14 @@
 <template>
   <div class="cv grid grid-cols-3 gap-4 rounded-2xl">
     <aside class="md:col-span-1 col-span-3">
-      <article class="cv_side text-center shadow-inner bg-blue-50 dark:bg-blue-900 px-10 py-10 rounded-2xl">
+      <article class="cv_side text-center shadow-inner bg-blue-50 dark:bg-blue-900 px-2 lg:px-10 py-10 rounded-2xl relative">
+        <div class="text-4xl absolute top-1 left-4 cursor-pointer">
+          <i v-if="$colorMode.preference === 'light'" class="fa fa-moon-o text-black" aria-hidden="true" @click="$colorMode.preference = 'dark'" />
+          <i v-if="$colorMode.preference === 'dark'" class="fa fa-lightbulb-o text-white" aria-hidden="true" @click="$colorMode.preference = 'light'" />
+        </div>
         <ProfileBox />
       </article>
-      <article class="cv_side text-left shadow-inner bg-blue-50 dark:bg-blue-900 px-10 py-10 mt-5 rounded-2xl">
+      <article class="cv_side text-left shadow-inner bg-blue-50 dark:bg-blue-900 px-6  lg:px-10 py-10 mt-5 rounded-2xl">
         <CvSideBarDetail
           :contact="contact"
           :skills="skills"
@@ -13,7 +17,7 @@
         />
       </article>
     </aside>
-    <div class="cv_content rounded-2xl md:col-span-2 col-span-3 shadow-inner  px-6 md:px-10">
+    <div class="cv_content rounded-2xl md:col-span-2 col-span-3 shadow-inner  px-3 md:px-10 ">
       <article>
         <div class="py-5">
           <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
@@ -28,10 +32,10 @@
             {{ $t('home.experience.title') }}
           </h4>
           <div v-for="(item,index) in $t('home.experience.items')" :key="index" class="mb-5 border p-5 rounded-2xl">
-            <p class="font-bold text-lg  text-blue-800 dark:text-white ">
+            <p class="font-extrabold text-lg  text-blue-800 dark:text-white ">
               {{ item.title }}
             </p>
-            <p class="font-normal text-md mb-2 text-blue-700 dark:text-white ">
+            <p class="font-bold text-md mb-2 text-blue-700 dark:text-white ">
               {{ item.job }}
             </p>
             <p>

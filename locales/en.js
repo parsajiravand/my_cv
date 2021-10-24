@@ -24,12 +24,13 @@ export default {
       title: 'SOCIAL'
     },
     aboutMe: {
-      title: 'ABOUTME',
-      description: `Hi, my name is Parsa Jiravand. I have been programming for about 4 years.
-                    I worked with private start-ups and state-owned companies.
-                    I think coding alone is not important, and thinking about the structure to be implemented is more important, so I may spend more hours thinking about coding.
-                    I do bodybuilding and my favorite sport is table tennis and I may listen to rock for hours.
-                    I love the open source world and helping others.`
+      title: 'ABOUT ME',
+      description: `My name is Parsa Jiravand. I have been programming for about 5 years.
+                    I have worked with private start-ups and state-owned companies.
+                    I believe coding structure is as important as coding alone , so I spending more hours thinking about structure of coding.
+                    I like to do open-source world and helping others.
+                    I always exercises fitnees and my favorite sport is table tennis and I like to listen to rock music also.
+                    `
     },
     experience: {
       title: 'EXPRIENCE',
@@ -59,7 +60,8 @@ export default {
           title: 'IranKaraco(services)',
           job: 'Front-End-Developer(Vue)',
           time: 'November 2019 - November 2020',
-          description: 'Secure purchase and sale of digital currencies',
+          description: `One of the priorities of Iran Karako is always to produce and provide technical services required by users
+                                  With the highest standards, to facilitate the pre-purchase process from them.`,
           tech: `Vue, RestAPI , WebSocket , Socket-io , 
           WebStreaming , BladeLaravel , Axios ,
            Bootstrap , Adobe-XD , WebSocket ,...`
@@ -90,7 +92,7 @@ export default {
     },
     projects: {
       title: 'PROJECTS',
-      description: 'Doing about 12 or more successful large startup projects and ...',
+      description: '',
       items: [
         { url: 'https://binex.online', name: 'Binex' },
         { url: 'https://panel.binex.online', name: 'BinexPanel' },

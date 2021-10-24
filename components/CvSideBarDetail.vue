@@ -6,7 +6,7 @@
       </h4>
       <div v-for="(item,index) in contact" :key="index" class="grid grid-cols-12">
         <i :class="['fa text-2xl text-blue-900 dark:text-gray-50',item.icon] " />
-        <span class="col-span-11 mt-1">{{ item.value }}</span>
+        <span class="col-span-11 md:col-span-9 mt-1 lg:mr-2">{{ item.value }}</span>
       </div>
     </div>
     <div class="cv_side_skills mt-10">
@@ -14,14 +14,18 @@
         {{ $t('home.skills.title') }}
       </h4>
       <ul class="flex flex-wrap">
-        <li v-for="(item,index) in skills" :key="index" class="rounded-2xl mr-2 mb-3 text-white px-3 py-2 bg-blue-900 dark:bg-black dark:text-gray-50">
+        <li
+          v-for="(item,index) in skills"
+          :key="index"
+          class="rounded-2xl mr-2 mb-3 font-semibold text-white px-3 py-2 bg-blue-900 dark:bg-blue-200 dark:text-gray-800"
+        >
           {{ item.name }}
         </li>
       </ul>
     </div>
     <div class="cv_side_skills mt-10">
       <h4 class="font-medium text-2xl mb-4 ">
-        {{ $t('home.skills.title') }}
+        {{ $t('home.softSkills.title') }}
       </h4>
       <ul class="ml-5">
         <li v-for="(item,index) in $t('home.softSkills.items')" :key="index" class="list-disc">
@@ -42,15 +46,15 @@
             </span>
           </div>
           <div class="text-right">
-            <span class="text-xs font-semibold inline-block text-blue-600">
+            <span class="text-xs font-semibold inline-block text-blue-600 dark:text-white">
               {{ item.percent }}%
             </span>
           </div>
         </div>
-        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-xl bg-blue-100">
+        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-xl bg-blue-100 ">
           <div
             :style="'width:'+item.percent+'%'"
-            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"
+            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500 "
           />
         </div>
       </div>
