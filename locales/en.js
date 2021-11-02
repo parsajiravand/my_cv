@@ -2,7 +2,7 @@ export default {
   home: {
     firstName: 'PARSA',
     lastName: 'JIRAVAND',
-    career: 'FRONT END DEVELOPER',
+    career: 'FRONT-END DEVELOPER',
     contact: {
       title: 'CONTACT'
     },

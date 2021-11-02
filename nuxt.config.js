@@ -89,6 +89,7 @@ export default {
       }
     ],
     strategy: 'no_prefix'
+
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
