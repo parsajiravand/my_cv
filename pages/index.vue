@@ -1,28 +1,6 @@
 <template>
   <div class="cv grid grid-cols-3 gap-4 rounded-2xl">
     <aside class="md:col-span-1 col-span-3">
-      <button class="text-4xl fixed bottom-4 right-8 cursor-pointer rounded-full shadow-inner bg-blue-900 dark:bg-white z-50">
-        <i
-          v-if="$colorMode.preference === 'light'"
-          class="fa fa-moon-o text-white px-4 py-3"
-          aria-hidden="true"
-          @click="$colorMode.preference = 'dark'"
-        />
-        <i
-          v-if="$colorMode.preference === 'dark'"
-          class="fa fa-lightbulb-o text-black px-5 py-3"
-          aria-hidden="true"
-          @click="$colorMode.preference = 'light'"
-        />
-      </button>
-      <button class="text-lg fixed bottom-20 right-9 cursor-pointer rounded-full shadow-inner bg-blue-900 dark:bg-white z-50">
-        <small v-if="$i18n.loadedLanguages[0] === 'fa'" class="dark:text-black text-white px-4 py-4" @click="changeLanguage('en')">
-          EN
-        </small>
-        <small v-if="$i18n.loadedLanguages[0] === 'en'" class="dark:text-black text-white  px-4 py-4" @click="changeLanguage('fa')">
-          FA
-        </small>
-      </button>
       <article class="cv_side text-center shadow-inner bg-blue-50 dark:bg-blue-900 px-2 lg:px-10 py-10 rounded-2xl relative">
         <ProfileBox />
       </article>
@@ -37,67 +15,7 @@
     </aside>
     <div class="cv_content rounded-2xl md:col-span-2 col-span-3 shadow-inner  px-3 md:px-10 ">
       <article>
-        <div class="py-5">
-          <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
-            {{ $t('home.aboutMe.title') }}
-          </h4>
-          <p class="leading-relaxed">
-            {{ $t('home.aboutMe.description') }}
-          </p>
-        </div>
-        <div class=" py-5 mt-5">
-          <h4 class="font-normal text-2xl mb-8 text-blue-800 dark:text-white ">
-            {{ $t('home.experience.title') }}
-          </h4>
-          <div v-for="(item,index) in $t('home.experience.items')" :key="index" class="mb-5 border p-5 rounded-2xl">
-            <p class="font-extrabold text-lg  text-blue-800 dark:text-white ">
-              {{ item.title }}
-            </p>
-            <p class="font-bold text-md  text-blue-700 dark:text-white ">
-              {{ item.job }}
-            </p>
-            <p class="text-light mb-2 text-blue-700 dark:text-white ">
-              {{ item.time }}
-            </p>
-            <p>
-              {{ item.description }}
-            </p>
-            <p class="mt-5 font-medium">
-              {{ item.tech }}
-            </p>
-          </div>
-        </div>
-        <div class=" py-5 mt-5">
-          <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
-            {{ $t('home.ecucation.title') }}
-          </h4>
-          <div v-for="(item,index) in $t('home.ecucation.items')" :key="index" class="mt-8">
-            <p class="font-bold text-lg  text-blue-800 dark:text-white ">
-              {{ item.title }}
-            </p>
-            <p class="font-normal text-md mb-2 text-blue-700 dark:text-white ">
-              {{ item.time }}
-            </p>
-            <p>
-              {{ item.description }}
-            </p>
-          </div>
-        </div>
-        <div class=" py-5 mt-5">
-          <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white ">
-            {{ $t('home.projects.title') }}
-          </h4>
-          <p class="mb-4">
-            {{ $t('home.projects.description') }}
-          </p>
-          <div v-for="(item,index) in $t('home.projects.items')" :key="index">
-            <a :href="item.url">
-              <p class="font-bold text-lg  text-blue-800 dark:text-blue-400 ">
-                <i class="fa fa-globe" /> {{ item.name }}
-              </p>
-            </a>
-          </div>
-        </div>
+        <CvContent />
       </article>
     </div>
   </div>
@@ -152,12 +70,6 @@ export default {
         },
         { key: 3, icon: 'fa-twitter', address: 'https://twitter.com/parsablk', name: 'Twitter' }
       ]
-    }
-  },
-  methods: {
-    changeLanguage (lang) {
-      document.cookie = `i18n_redirected=${lang}; SameSite=None; Secure`
-      window.location.reload()
     }
   }
 
