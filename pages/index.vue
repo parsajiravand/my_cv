@@ -54,21 +54,21 @@ export default {
           key: 0,
           icon: 'fa-linkedin',
           address: 'https://www.linkedin.com/in/parsa-jiravand-16704a1a6/',
-          name: 'Linkedin'
+          name: 'parsa-jiravand'
         },
         {
           key: 1,
           icon: 'fa-whatsapp',
           address: 'https://wa.me/00989166320277',
-          name: 'Whatsapp'
+          name: '+989166320277'
         },
         {
           key: 2,
           icon: 'fa-instagram',
           address: 'https://www.instagram.com/parsablk/',
-          name: 'Instagram'
+          name: 'parsablk'
         },
-        { key: 3, icon: 'fa-twitter', address: 'https://twitter.com/parsablk', name: 'Twitter' }
+        { key: 3, icon: 'fa-twitter', address: 'https://twitter.com/parsablk', name: 'parsablk' }
       ]
     }
   }

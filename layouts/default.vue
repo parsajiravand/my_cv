@@ -1,5 +1,8 @@
 <template>
-  <div class="dark:bg-gray-800 dark:text-gray-200">
+  <div
+    class="dark:bg-gray-800 dark:text-gray-200"
+    :class="$i18n.loadedLanguages[0] === 'fa'? 'rtl' :''"
+  >
     <div class="container mx-auto p-4">
       <button class="text-4xl fixed bottom-4 right-8 cursor-pointer rounded-full shadow-inner bg-blue-900 dark:bg-white z-50">
         <i
@@ -49,3 +52,8 @@ export default {
   }
 }
 </script>
+<style lang="css">
+  .rtl{
+    direction: rtl;
+  }
+</style>
