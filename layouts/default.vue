@@ -18,14 +18,16 @@
           @click="$colorMode.preference = 'light'"
         />
       </button>
-      <button class="text-lg fixed bottom-20 right-9 cursor-pointer rounded-full shadow-inner bg-blue-900 dark:bg-white z-50">
-        <small v-if="$i18n.loadedLanguages[0] === 'fa'" class="dark:text-black text-white px-4 py-4" @click="changeLanguage('en')">
-          EN
-        </small>
-        <small v-if="$i18n.loadedLanguages[0] === 'en'" class="dark:text-black text-white  px-4 py-4" @click="changeLanguage('fa')">
-          FA
-        </small>
-      </button>
+      <client-only>
+        <button class="text-lg fixed bottom-20 right-9 cursor-pointer rounded-full shadow-inner bg-blue-900 dark:bg-white z-50">
+          <small v-if="$i18n.loadedLanguages[0] === 'fa'" class="dark:text-black text-white px-4 py-4" @click="changeLanguage('en')">
+            EN
+          </small>
+          <small v-if="$i18n.loadedLanguages[0] === 'en'" class="dark:text-black text-white  px-4 py-4" @click="changeLanguage('fa')">
+            FA
+          </small>
+        </button>
+      </client-only>
       <Nuxt />
     </div>
   </div>
