@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="$i18n.loadedLanguages[0] === 'fa'? 'text-right' :''">
     <div class="cv_side_contact">
       <h4 class="font-medium text-2xl  mb-2">
         {{ $t('home.contact.title') }}
