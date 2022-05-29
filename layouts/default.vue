@@ -40,8 +40,9 @@ export default {
       /* default nuxt color mode is system */
       const color = localStorage.getItem('nuxt-color-mode')
       /* for first time render color select because default color is system */
-      if (color === 'system') { this.$colorMode.preference = 'light' }
+      if (color === 'system' || !color) { this.$colorMode.preference = 'light' }
     }
+    console.log(this.$colorMode.preference)
   },
   methods: {
     changeLanguage (lang) {
