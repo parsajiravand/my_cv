@@ -32,6 +32,7 @@ export default {
       ],
       skills: [
         { key: 0, name: 'Vue' },
+        { key: 12, name: 'Vue3' },
         { key: 1, name: 'Nuxt' },
         { key: 2, name: 'Javascript' },
         { key: 3, name: 'Vuex' },
@@ -42,8 +43,14 @@ export default {
         { key: 8, name: 'Css3' },
         { key: 9, name: 'API' },
         { key: 10, name: 'Sass' },
-        { key: 11, name: 'WebSocket' },
-        { key: 11, name: 'GIT' }
+        { key: 13, name: 'WebSocket' },
+        { key: 14, name: 'GIT' },
+        { key: 15, name: 'Vite' },
+        { key: 16, name: 'Npm' },
+        { key: 17, name: 'Bootstrap' },
+        { key: 18, name: 'Typescript' },
+        { key: 19, name: 'Nodejs' },
+        { key: 20, name: 'Express' }
       ],
       languages: [
         { key: 0, percent: 80, name: 'English' },
@@ -52,23 +59,29 @@ export default {
       socials: [
         {
           key: 0,
+          icon: 'fa-github',
+          address: 'https://github.com/parsajiravand',
+          name: 'parsajiravand'
+        },
+        {
+          key: 1,
           icon: 'fa-linkedin',
           address: 'https://www.linkedin.com/in/parsa-jiravand-16704a1a6/',
           name: 'parsa-jiravand'
         },
         {
-          key: 1,
+          key: 2,
           icon: 'fa-whatsapp',
           address: 'https://wa.me/00989166320277',
           name: '+989166320277'
         },
         {
-          key: 2,
+          key: 3,
           icon: 'fa-instagram',
           address: 'https://www.instagram.com/parsablk/',
           name: 'parsablk'
         },
-        { key: 3, icon: 'fa-twitter', address: 'https://twitter.com/parsablk', name: 'parsablk' }
+        { key: 4, icon: 'fa-twitter', address: 'https://twitter.com/parsablk', name: 'parsablk' }
       ]
     }
   }

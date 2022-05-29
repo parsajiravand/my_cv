@@ -42,7 +42,6 @@ export default {
       /* for first time render color select because default color is system */
       if (color === 'system' || !color) { this.$colorMode.preference = 'light' }
     }
-    console.log(this.$colorMode.preference)
   },
   methods: {
     changeLanguage (lang) {

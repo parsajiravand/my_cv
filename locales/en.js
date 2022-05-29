@@ -46,7 +46,7 @@ export default {
           GitLab,Jira ,ComponentFlow,UnitTesting,Socket-IO,FireBase,VeeValidate,gsap...`
         },
         {
-          title: 'Open-Sources-Projects',
+          title: 'OpenSourcesProjects',
           job: 'Npm Package Creator',
           time: 'October 2021 - Current',
           description: 'Create Open Source packages for vue and ... and published on Npm',
