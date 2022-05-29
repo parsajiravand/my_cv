@@ -36,9 +36,27 @@ export default {
       title: 'EXPRIENCE',
       items: [
         {
+          title: 'Terminal101(booking) in London-England',
+          job: 'Front-End TeamLlead',
+          time: 'October 2021 - Current',
+          description: 'See more , Save more !Lets a book your trip with amazing discount',
+          tech: ` Nuxt ,Vue-Cli,
+          SSR , CSR , BootstrapVue , Nuxt-i18n,Nuxtjs/axios,
+          Jest , Vuex , Nuxt-18n , Figma ,
+          GitLab,Jira ,ComponentFlow,UnitTesting,Socket-IO,FireBase,VeeValidate,gsap...`
+        },
+        {
+          title: 'Open-Sources-Projects',
+          job: 'Npm Package Creator',
+          time: 'October 2021 - Current',
+          description: 'Create Open Source packages for vue and ... and published on Npm',
+          tech: 'vite,vue3,rollup,typescript,vue-press,npm,github,...'
+        },
+
+        {
           title: 'Binex(exchange)',
           job: 'Front-End-Developer(Nuxt)',
-          time: 'April 2021 - Current',
+          time: 'April 2021 - May 2022',
           description: 'Secure purchase and sale of digital currencies',
           tech: `GraphQL , WebSocket , Nuxt ,
           SSR , CSR , BootstrapVue ,
@@ -94,6 +112,10 @@ export default {
       title: 'PROJECTS',
       description: '',
       items: [
+        { url: 'https://terminal101.co', name: 'Terminal101' },
+        { url: 'https://backoffice.terminal101.co', name: 'Terminal101-Backoffice' },
+        { url: 'https://www.npmjs.com/package/vue-client-recaptcha', name: 'VueClientRecaptcha' },
+        { url: 'https://www.npmjs.com/package/vue3-form-wizard', name: 'Vue3FormWizard' },
         { url: 'https://binex.online', name: 'Binex' },
         { url: 'https://panel.binex.online', name: 'BinexPanel' },
         { url: 'https://web.dibaanzh.com/index.html', name: 'Dibaanzh' },
