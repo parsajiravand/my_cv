@@ -36,8 +36,8 @@ export default {
       title: 'EXPRIENCE',
       items: [
         {
-          title: 'Terminal101(booking) in London-England',
-          job: 'Front-End TeamLlead',
+          title: 'Terminal101(booking)',
+          job: 'Front-End Teamlead',
           time: 'October 2021 - Current',
           description: 'See more , Save more !Lets a book your trip with amazing discount',
           tech: ` Nuxt ,Vue-Cli,

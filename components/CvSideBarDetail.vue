@@ -6,7 +6,7 @@
       </h4>
       <div v-for="(item,index) in contact" :key="index" class="grid grid-cols-12">
         <i :class="['fa text-2xl text-blue-900 dark:text-gray-50',item.icon] " />
-        <span class="col-span-11 md:col-span-9 mt-1 lg:mr-2">{{ item.value }}</span>
+        <span class="col-span-11 md:col-span-10 mt-1 lg:mr-2">{{ item.value }} <small v-show="index===0" class="text-red-500 font-bold">Please Call Me On WhatsApp</small></span>
       </div>
     </div>
     <div class="cv_side_skills mt-10">

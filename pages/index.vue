@@ -26,9 +26,10 @@ export default {
   data () {
     return {
       contact: [
-        { key: 0, icon: 'fa-phone', value: '+98-916-632-0277' },
+        { key: 0, icon: 'fa-phone', value: '+905077428579,+989166320277' },
         { key: 1, icon: 'fa-google', value: 'parsajiravand@gmail.com' },
-        { key: 2, icon: 'fa-map-marker', value: 'Iran,Karaj,Azimie' }
+        { key: 2, icon: 'fa-map-marker', value: 'Turkey,Istanbul' },
+        { key: 3, icon: 'fa-map-marker', value: 'Iran,Karaj' }
       ],
       skills: [
         { key: 0, name: 'Vue' },
