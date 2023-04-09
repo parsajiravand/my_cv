@@ -18,7 +18,12 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@kevinmarrec/nuxt-pwa",
     "@nuxt/devtools",
-    "@nuxtjs/color-mode",
+    [
+      "@nuxtjs/color-mode",
+      {
+        classSuffix: "",
+      },
+    ],
     [
       "@nuxtjs/i18n",
       {
@@ -53,4 +58,5 @@ export default defineNuxtConfig({
       lang: "en",
     },
   },
+
 });
