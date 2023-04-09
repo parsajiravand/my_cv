@@ -1,5 +1,5 @@
 <template>
-  <Html :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
+  <Html :lang="locale" :dir="head.htmlAttrs?.dir">
     <Head>
       <Title>{{ title }}</Title>
 
