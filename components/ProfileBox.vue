@@ -3,7 +3,7 @@
     <a href="https://parsajiravand.netlify.app/" target="_blank">
       <img
         class="w-40 h-40 rounded-full mx-auto"
-        src="@/static/img/parsa-jiravand-min.jpg"
+        src="/img/parsa-jiravand-min.jpg"
         alt="parsa jiravand"
       >
     </a>
