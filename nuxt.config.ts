@@ -9,7 +9,7 @@ export default defineNuxtConfig({
           hid: "description",
           name: "description",
           content:
-            "Hi, my name is Parsa Jiravand. I have been programming for about 4 years. I worked with private start-ups and state-owned companies."
+            "Hi, my name is Parsa Jiravand. I have been programming for about 4 years. I worked with private start-ups and state-owned companies.",
         },
         { name: "format-detection", content: "telephone=no" },
         { name: "author", content: "parsajiravand" },
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         {
           name: "og:description",
           content:
-            "Hi, my name is Parsa Jiravand. I have been programming for about 4 years. I worked with private start-ups and state-owned companies."
+            "Hi, my name is Parsa Jiravand. I have been programming for about 4 years. I worked with private start-ups and state-owned companies.",
         },
         { name: "og:image", content: "" },
         { name: "twitter:url", content: "parsajiravand" },
@@ -27,22 +27,24 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Hi, my name is Parsa Jiravand. I have been programming for about 4 years. I worked with private start-ups and state-owned companies."
+            "Hi, my name is Parsa Jiravand. I have been programming for about 4 years. I worked with private start-ups and state-owned companies.",
         },
-        { name: "twitter:image", content: "" }
+        { name: "twitter:image", content: "" },
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         {
           rel: "stylesheet",
-          href:
-            "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-        }
-      ]
-    }
+          href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css",
+        },
+      ],
+    },
   },
   modules: [
     "@nuxtjs/tailwindcss",
+    "@kevinmarrec/nuxt-pwa",
+    "@nuxt/devtools",
+    "@nuxtjs/color-mode",
     [
       "@nuxtjs/i18n",
       {
@@ -53,15 +55,28 @@ export default defineNuxtConfig({
           {
             code: "en",
             file: "en.js",
-            dir: "ltr"
+            dir: "ltr",
           },
           {
             code: "fa",
             file: "fa.js",
-            dir: "rtl"
-          }
-        ]
-      }
-    ]
-  ]
+            dir: "rtl",
+          },
+        ],
+      },
+    ],
+  ],
+  pwa: {
+    manifest: {
+      name: "parsa jiravand",
+      short_name: "parsa jiravand",
+      description: "parsa jiravand",
+      lang: "en",
+    },
+    meta: {
+      name: "parsa jiravand",
+      description: "parsa jiravand",
+      lang: "en",
+    },
+  },
 });
