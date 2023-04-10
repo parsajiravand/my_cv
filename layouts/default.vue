@@ -74,9 +74,8 @@ const colorMode = useColorMode();
 const route = useRoute();
 
 //i18n
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
-const { t } = useI18n();
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: "id",
