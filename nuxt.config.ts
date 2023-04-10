@@ -33,12 +33,12 @@ export default defineNuxtConfig({
         locales: [
           {
             code: "en",
-            file: "en.js",
+            file: "en.ts",
             dir: "ltr",
           },
           {
             code: "fa",
-            file: "fa.js",
+            file: "fa.ts",
             dir: "rtl",
           },
         ],
