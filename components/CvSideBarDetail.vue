@@ -118,6 +118,8 @@
   </div>
 </template>
 <script setup lang="ts">
+// i18n setup
+const { tm, t } = useI18n();
 // interface
 interface Contact {
   icon: string;
@@ -160,6 +162,5 @@ defineProps({
   },
 });
 
-// i18n setup
-const { tm, t } = useI18n();
+
 </script>
