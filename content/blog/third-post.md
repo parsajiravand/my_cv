@@ -3,6 +3,8 @@ title: 'This is my third article!'
 description: 'You finally got the point about Nuxt content'
 img: 'img/cover (3).JPG'
 tags: [Nuxt, Content, Learning, third]
+lang: "en"
+
 ---
 
 ## My third blog post

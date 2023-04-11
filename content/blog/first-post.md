@@ -3,6 +3,8 @@ title: 'Performance With AliMosadeq'
 description: 'HiSeo'
 img: 'https://hiseo.co/wp-content/uploads/2023/04/Logo-HISEO.svg'
 tags: [Performance, AliMosadeq, SEO, first]
+lang: "en"
+
 ---
 
 ## My first blog post
