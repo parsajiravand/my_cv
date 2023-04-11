@@ -4,7 +4,6 @@
 
 definePageMeta({
   key: (route) => route.fullPath,
-  layout: "blog",
 });
 
 // get tag query
@@ -22,7 +21,7 @@ useHead({
 </script>
 <template>
   <main>
-    <header class="page-heading">
+    <header class="page-heading bg-gray-50 dark:bg-gray-700 rounded-xl">
       <div class="wrapper">
         <h1 class="text-5xl font-extrabold">All articles</h1>
         <p class="font-medium text-lg">Here's a list of all my great articles</p>

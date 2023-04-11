@@ -45,7 +45,7 @@ console.log({ articleTags });
     <!-- Button to toggle expand -->
     <button @click="toggleExpand" class="cta w-icon">
       <TagIcon class="icon solid" />
-      <span>Tags</span>
+      <span class="text-gray-700">Tags</span>
     </button>
     <ul class="article-tags" :class="{ expanded: expanded }">
       <!-- list out tags with links -->

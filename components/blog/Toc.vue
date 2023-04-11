@@ -26,7 +26,7 @@ const flattenLinks = (links) => {
 <template>
   <nav class="toc">
     <header class="toc-header">
-      <h3 class="text-xl font-bold">Table of contents</h3>
+      <h3 class="text-xl font-bold dark:text-gray-500">Table of contents</h3>
     </header>
     <ul class="toc-links">
       <!-- render each link with depth class -->

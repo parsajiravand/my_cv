@@ -68,7 +68,7 @@ h6 {
 /* BLOG PAGES */
 
 .page-heading {
-  @apply p-12 bg-slate-50;
+  @apply p-12 ;
 }
 
 .page-heading > .wrapper {
