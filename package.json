@@ -10,11 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@heroicons/vue": "^2.0.17",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
+    "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/devtools": "^0.3.2",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "^8.0.0-beta.10",
     "@nuxtjs/tailwindcss": "^6.6.5",
+    "@tailwindcss/typography": "^0.5.9",
     "nuxt": "^3.2.2"
   }
 }
