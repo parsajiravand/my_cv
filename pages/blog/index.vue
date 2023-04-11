@@ -1,6 +1,7 @@
 <!-- ./pages/blog/index.vue -->
 
 <script setup>
+const { locale } = useI18n();
 
 definePageMeta({
   key: (route) => route.fullPath,
@@ -35,10 +36,13 @@ useHead({
       <ContentList
         path="/blog"
         :query="{
-          only: ['title', 'description', 'tags', '_path', 'img'],
+          only: ['title', 'description', 'tags', '_path', 'img','lang'],
           where: {
             tags: {
               $contains: filter,
+            },
+            lang: {
+              $eq: locale,
             },
           },
           $sensitivity: 'base',
