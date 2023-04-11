@@ -1,29 +1,16 @@
 <template>
-    <footer class="site-footer">
-        <div class="wrapper">
-            <div class="footer-info">
-                <p class="text-xl font-bold">
-                    <a href="http://nuxt.com" target="_blank" rel="noopener noreferrer">Nuxt 3</a> + <a
-                        href="https://content.nuxtjs.org/" target="_blank" rel="noopener noreferrer"> Content v2</a> Starter
-                </p>
-                <span>Built with 💖 by <a href="http://miracleio.me" target="miracleio"
-                        rel="noopener noreferrer">Miracleio</a></span>
-            </div>
-            <ul class="footer-links">
-                <li class="link-item">
-                    <a href="https://github.com/miracleonyenma/content-v2-blog" target="_blank"
-                        rel="noopener noreferrer">View Code on GitHub </a>
-                </li>
-            </ul>
-        </div>
+    <footer
+      class="my-5 border-t dark:border-t-gray-500 pt-2 text-center dark:text-blue-400 text-blue-700 w-full"
+    >
+      <a href="https://parsajiravand.netlify.app/" target="_blank"
+        >© {{ getYear }} | ParsaJiravand
+      </a>
     </footer>
 </template>
-<style scoped>
-.site-footer {
-    @apply bg-white px-4 py-12 border-t border-slate-100;
-}
 
-.site-footer>.wrapper {
-    @apply flex flex-wrap gap-16 justify-between m-auto max-w-6xl;
-}
-</style>
+<script setup lang="ts">
+const getYear = computed(():number => {
+  const date = new Date();
+  return date.getFullYear();
+});
+</script>
