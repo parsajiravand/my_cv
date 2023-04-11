@@ -26,7 +26,7 @@ const flattenLinks = (links) => {
 <template>
   <nav class="toc">
     <header class="toc-header">
-      <h3 class="text-xl font-bold dark:text-gray-500">Table of contents</h3>
+      <h3 class="text-xl font-bold">Table of contents</h3>
     </header>
     <ul class="toc-links">
       <!-- render each link with depth class -->
@@ -41,24 +41,24 @@ const flattenLinks = (links) => {
 
 <style scoped>
 .toc {
-  @apply p-4 bg-slate-50 border border-slate-200 rounded-lg;
+  @apply p-4 bg-slate-50 border border-slate-200 rounded-lg dark:bg-gray-600 ;
   @apply max-h-[calc(100vh-6rem)] overflow-auto;
 }
 
 .toc-header {
-  @apply pb-2 mb-2 border-b border-slate-200;
+  @apply pb-2 mb-2 border-b border-slate-200 dark:text-gray-50;
 }
 
 .toc-links {
-  @apply flex flex-col gap-2 px-2;
+  @apply flex flex-col gap-2 px-2 ;
 }
 
 .toc-link {
-  @apply text-slate-500;
+  @apply text-slate-500 dark:text-gray-50;
 }
 
 .toc-link._3 {
-  @apply pl-3;
+  @apply pl-3 ;
 }
 
 .toc-link._4 {
