@@ -41,6 +41,7 @@
             />
           </button>
           <button
+            v-show="showChangeLanguage"
             class="text-lg fixed bottom-20 right-9 cursor-pointer rounded-full shadow-inner bg-blue-900 dark:bg-white z-50"
           >
             <NuxtLink
@@ -115,7 +116,21 @@ const metaList = computed(() => [
   },
 ]);
 
+// check route for translate
+const showChangeLanguage = computed(() => {
+  const showRoutes: string[] = ["index", "blog"];
+  // split route name for remove __lang
+  //@ts-ignore
+  const routeSplited = route.name?.split("__")[0];
+  // check route name for show change language button
+  if (showRoutes.includes(routeSplited as any)) {
+    return true;
+  }
+  return false;
+});
+
 onMounted(() => {
+  console.log(route);
   /* default nuxt color mode is system */
   const color = localStorage.getItem("nuxt-color-mode");
   /* for first time render color select because default color is system */
