@@ -1,22 +1,23 @@
 ---
-title: "Best Practices with Setup Function and Composition API in Vue 3"
-description: "HiSeo"
+title: "Setup Function and Composition API in Vue 3"
+description: "Best Practices with Setup Function and Composition API in Vue 3"
 img: "/img/blog/best-practices-composition-API-in-vue3.webp"
 tags: [Vue, CompositionAPI, BestPractice, first]
-lang: "fa"
+lang: "en"
 ---
 
-## 1. نگه داشتن تابع Setup کوچک
-تابع Setup مسئول تنظیم کامپوننت قبل از نصب آن است. بهتر است تابع Setup را کوچک و متمرکز بر مسئولیت های اصلی خود نگه دارید. تابع Setup باید عمدتاً برای موارد زیر استفاده شود:
+## 1. Keep Setup Function Small
 
-اعلان داده های ویژگی های واکنشی
-ثبت ویژگی های محاسبه شده و متدها
-ثبت کننده های رویداد و هوک های چرخه زندگی
-وارد کردن و تزریق وابستگی ها
+The setup function is responsible for setting up the component before it's mounted. It's a good practice to keep the setup function small and focused on its primary responsibilities. The setup function should mainly be used for:
 
+Declaring reactive data and reactive properties
+Registering computed properties and methods
+Registering event handlers and lifecycle hooks
+Importing and injecting dependencies
 
-## 2. استفاده از توابع ترکیبی
-API ترکیب به شما اجازه می دهد تا گروه هایی از ویژگی ها و توابع واکنشی را با سهولت ایجاد و استفاده مجدد کنید. به جای تعریف همه ویژگی های واکنشی و توابع داخل تابع Setup ، می توانید آنها را در یک تابع ترکیبی استخراج کنید و در هرجایی که نیاز است ، استفاده کنید.
+## 2. Use Composition Functions
+
+The Composition API allows you to create and reuse groups of reactive properties and functions with ease. Instead of declaring all the reactive properties and functions inside the setup function, you can extract them into a composition function and use them wherever needed.
 
 ```javascript
 import { ref, computed } from "vue";
@@ -38,7 +39,7 @@ export function useCounter() {
 }
 ```
 
-سپس می توانید تابع useCounter را در تابع Setup خود استفاده کنید:
+Then, you can use the useCounter function in your setup function:
 
 ```javascript
 import { useCounter } from "./useCounter";
@@ -56,7 +57,7 @@ export default {
 };
 ```
 
-این به شما امکان می دهد کدهای خود را به توابع کوچک و قابل استفاده مجدد تقسیم کرده و تابع Setup خود را برای تنظیم کامپوننت تمرکز دهید.
+This allows you to organize your code into small, reusable functions and keep your setup function focused on setting up the component.
 
 ## 3. Use onXXX Event Naming Convention
 
