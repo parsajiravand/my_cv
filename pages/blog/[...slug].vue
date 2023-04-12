@@ -2,12 +2,16 @@
 
 <script setup>
 const { path } = useRoute();
+
 const { data } = await useAsyncData(`content-${path}`, async () => {
   // fetch document where the document path matches with the cuurent route
   let article = queryContent().where({ _path: path }).findOne();
   // get the surround information,
   // which is an array of documeents that come before and after the current document
-  let surround = queryContent().only(["_path", "title", "description"]).sort({ date: 1 }).findSurround(path);
+  let surround = queryContent()
+    .only(["_path", "title", "description", "lang"])
+    .sort({ date: 1 })
+    .findSurround(path);
 
   return {
     article: await article,
@@ -33,15 +37,25 @@ useHead({
 });
 </script>
 <template>
-  <main id="main" class="article-main">
+  <main
+    id="main"
+    class="article-main"
+    :class="data.article.lang === 'fa' ? 'rtl' : ''"
+  >
     <header v-if="data.article" class="article-header">
       <div class="img-cont h-72 mb-12">
-        <img :src="`${data.article.img}`" :alt="data.article.title" class=" rounded-2xl" />
+        <img
+          :src="`${data.article.img}`"
+          :alt="data.article.title"
+          class="rounded-2xl"
+        />
       </div>
       <h1 class="heading">{{ data.article.title }}</h1>
       <p class="supporting">{{ data.article.description }}</p>
       <ul class="article-tags">
-        <li class="tag" v-for="(tag, n) in data.article.tags" :key="n">{{ tag }}</li>
+        <li class="tag" v-for="(tag, n) in data.article.tags" :key="n">
+          {{ tag }}
+        </li>
       </ul>
     </header>
     <hr />
