@@ -8,15 +8,20 @@
         {{ t("home.aboutMe.description") }}
       </p>
     </div>
-    <div class="py-5 mt-5">
+    <div class="py-5 mt-5 relative">
       <h4 class="font-normal text-2xl mb-8 text-blue-800 dark:text-white">
         {{ t("home.experience.title") }}
       </h4>
       <div
-        v-for="(item,index) in tm('home.experience.items' as string)"
+        v-for="(item, index) in sortExprience"
         :key="index"
         class="mb-5 border p-5 rounded-2xl"
       >
+        <span v-if="item.pinned">
+          <i
+            class="fa fa-thumb-tack fa-2x rotate-45 absolute right-5 text-gray-700 dark:text-gray-100"
+          ></i>
+        </span>
         <p class="font-extrabold text-lg text-blue-800 dark:text-white">
           {{ item.title }}
         </p>
@@ -58,4 +63,19 @@
 </template>
 <script setup lang="ts">
 const { tm, t } = useI18n();
+
+// show first pinned exprience
+const sortExprience = computed(() => {
+  //@ts-ignore
+  const pinned = tm('home.experience.items' as string).filter(
+    (item: any) => item.pinned
+  );
+  //@ts-ignore
+  const unpinned = tm('home.experience.items' as string).filter(
+    (item: any) => !item.pinned
+  );
+  return [...pinned, ...unpinned];
+});
+
+
 </script>

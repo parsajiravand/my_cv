@@ -30,7 +30,7 @@
           :key="index"
           class="rounded-2xl mr-2 mb-3 text-xs font-semibold text-white px-2 py-1 bg-blue-900 dark:bg-blue-200 dark:text-gray-800"
         >
-          {{ item.name }}
+          {{ item }}
         </li>
       </ul>
     </div>
@@ -125,9 +125,7 @@ interface Contact {
   icon: string;
   value: string;
 }
-interface Skill {
-  name: string;
-}
+
 interface Language {
   name: string;
   percent: number;
@@ -146,7 +144,7 @@ defineProps({
     required: false,
   },
   skills: {
-    type: Array as PropType<Skill[]>,
+    type: Array as PropType<String[]>,
     default: () => [],
     required: false,
   },
@@ -161,6 +159,4 @@ defineProps({
     required: false,
   },
 });
-
-
 </script>
