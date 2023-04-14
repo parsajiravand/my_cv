@@ -25,7 +25,7 @@
         <p class="font-extrabold text-lg text-blue-800 dark:text-white">
           {{ item.title }}
         </p>
-        <p class="font-bold text-md text-blue-700 dark:text-white">
+        <p class="font-semibold text-lg text-blue-700 dark:text-white">
           {{ item.job }}
         </p>
         <p class="text-light mb-2 text-blue-700 dark:text-white">
@@ -50,15 +50,17 @@
           >
             <a class=" " target="_blank" :href="project.url">
               <nuxt-img
-                class="mx-auto"
+                class="mx-auto my-1"
                 :src="`/img/${project.logo}`"
                 loading="lazy"
                 preload
                 :alt="project.name"
                 width="65px"
                 height="65px"
+                format="webp"
+                fit="fill"
               />
-              <span class="mt-4">
+              <span class="">
                 {{ project.name }}
               </span>
             </a>

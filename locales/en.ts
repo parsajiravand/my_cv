@@ -50,6 +50,19 @@ export default {
           SSR , CSR , BootstrapVue , Nuxt-i18n,Nuxtjs/axios,
           Jest , Vuex , Nuxt-18n , Figma ,
           GitLab,Jira ,ComponentFlow,UnitTesting,Socket-IO,FireBase,VeeValidate,gsap...`,
+          projects: [
+            {
+              name: "Terminal 101",
+              url: "https://www.terminal101.co/",
+              logo: "terminal101/terminal101.svg",
+            },
+            {
+              name: "Dussfand",
+              url: "https://dassfund.com/",
+              logo: "terminal101/dassfund.svg",
+            },
+
+          ],
         },
         {
           title: "OpenSourcesProjects",
@@ -102,6 +115,19 @@ export default {
           SSR , CSR , BootstrapVue ,
           Jest , Vuex , Nuxt-18n , Figma ,
           GitLab ,...`,
+          projects: [
+            {
+              name: "Binex",
+              url: "https://binex.online/",
+              logo: "binex/binex.svg",
+            },
+            {
+              name: "Binex Panel",
+              url: "https://panel.binex.online/login",
+              logo: "binex/binex.svg",
+            },
+
+          ],
         },
         {
           title: "Dibaanzh(educational)",
