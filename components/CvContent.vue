@@ -35,12 +35,39 @@
           {{ item.description }}
         </p>
         <p class="mt-5 font-medium">
-          {{ item.tech }}
+        <span class="font-bold">
+          Technologies : 
+        </span>   {{ item.tech }}
         </p>
+
+        <section
+          class="flex flex-row flex-wrap my-2 justify-center text-center  "
+        >
+          <span
+            v-for="(project, index) in item.projects"
+            :key="index"
+            class="basis-1/2 grow-0 md:basis-1/4 m-2  p-2 shadow-inner rounded-lg cursor-pointer hover:shadow-lg text-gray-600 text-sm  dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-300"
+          >
+            <a class=" " target="_blank" :href="project.url">
+              <nuxt-img
+                class="mx-auto"
+                :src="`/img/${project.logo}`"
+                loading="lazy"
+                preload
+                :alt="project.name"
+                width="65px"
+                height="65px"
+              />
+              <span class="mt-4">
+                {{ project.name }}
+              </span>
+            </a>
+          </span>
+        </section>
       </div>
     </div>
     <div class="py-5 mt-5">
-      <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white">
+      <h4 class="font-normal text-2xl mb-4 text-blue-800 ">
         {{ t("home.ecucation.title") }}
       </h4>
       <div
@@ -67,15 +94,13 @@ const { tm, t } = useI18n();
 // show first pinned exprience
 const sortExprience = computed(() => {
   //@ts-ignore
-  const pinned = tm('home.experience.items' as string).filter(
+  const pinned = tm("home.experience.items" as string).filter(
     (item: any) => item.pinned
   );
   //@ts-ignore
-  const unpinned = tm('home.experience.items' as string).filter(
+  const unpinned = tm("home.experience.items" as string).filter(
     (item: any) => !item.pinned
   );
   return [...pinned, ...unpinned];
 });
-
-
 </script>

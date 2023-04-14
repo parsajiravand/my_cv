@@ -53,11 +53,44 @@ export default {
         },
         {
           title: "OpenSourcesProjects",
-          job: "Npm Package Creator",
+          job: "Npm Package Creator , Github Maintainer",
           time: "October 2021 - Current",
           description:
-            "Create Open Source packages for vue and ... and published on Npm",
-          tech: "vite,vue3,rollup,typescript,vue-press,npm,github,docemention,...",
+            "Create Open Source packages for vue,javascript, and ... and published on Npm",
+          tech: "Vite,Vue3,Angular,Nuxt3,Javascript,Tailwind,Rollup,Typescript,Vue-press,NPM,Github,Docemention,UnitTest,...",
+          pinned: true,
+          projects: [
+            {
+              name: "Vue3 Form Wizard",
+              url: "https://www.npmjs.com/package/vue3-form-wizard",
+              logo: "open-source-projects/vue3-form-wizard.png",
+            },
+            {
+              name: "Vue Client Recaptcha",
+              url: "https://vue-client-recaptcha.netlify.app/",
+              logo: "open-source-projects/vue-client-recaptcha.png",
+            },
+            {
+              name: "Helping Js",
+              url: "https://helping-js.netlify.app/",
+              logo: "open-source-projects/helping-js.png",
+            },
+            {
+              name: "Parsa Jiravand",
+              url: "https://parsajiravand.netlify.app/",
+              logo: "open-source-projects/parsa-jiravand.png",
+            },
+            {
+              name: "Ng Clips",
+              url: "https://ng-clips.netlify.app/",
+              logo: "open-source-projects/ng-clips.png",
+            },
+            {
+              name: "Piaraam",
+              url: "https://piaraam.web.app/",
+              logo: "open-source-projects/piaraam.png",
+            },
+          ],
         },
 
         {
