@@ -35,40 +35,40 @@
           {{ item.description }}
         </p>
         <p class="mt-5 font-medium">
-        <span class="font-bold">
-          Technologies : 
-        </span>   {{ item.tech }}
+          <span class="font-bold"> Technologies : </span> {{ item.tech }}
         </p>
 
         <section
-          class="flex flex-row flex-wrap my-2 justify-center text-center  "
+          class="flex flex-row flex-wrap my-2 justify-center text-center"
         >
-          <span
+          <div
             v-for="(project, index) in item.projects"
             :key="index"
-            class="basis-1/2 grow-0 md:basis-1/4 m-2  p-2 shadow-inner rounded-lg cursor-pointer hover:shadow-lg text-gray-600 text-sm  dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-300"
+            class="basis-1/2 grow-0 md:basis-1/4 m-2 p-2 shadow-inner rounded-lg cursor-pointer hover:shadow-lg text-gray-600 text-sm dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-300"
           >
-            <a class=" " target="_blank" :href="project.url">
-              <nuxt-img
-                class="mx-auto my-1"
-                :src="`/img/${project.logo}`"
-                loading="lazy"
-                preload
-                :alt="project.name"
-                width="65px"
-                height="60px"
-                fit="fill"
-              />
-              <span class="">
+            <a class="flex flex-col justify-between h-full" target="_blank" :href="project.url">
+              <div>
+                <nuxt-img
+                  class="mx-auto my-2"
+                  :src="`/img/${project.logo}`"
+                  loading="lazy"
+                  preload
+                  :alt="project.name"
+                  width="85"
+                  fit="fill"
+                />
+              </div>
+
+              <div class="">
                 {{ project.name }}
-              </span>
+              </div>
             </a>
-          </span>
+          </div>
         </section>
       </div>
     </div>
     <div class="py-5 mt-5">
-      <h4 class="font-normal text-2xl mb-4 text-blue-800 ">
+      <h4 class="font-normal text-2xl mb-4 text-blue-800">
         {{ t("home.ecucation.title") }}
       </h4>
       <div
