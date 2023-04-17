@@ -97,7 +97,7 @@
         </a>
       </div>
     </div>
-    <div class="py-5 mt-5">
+   <!--  <div class="py-5 mt-5">
       <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white">
         {{ t("home.projects.title") }}
       </h4>
@@ -114,7 +114,7 @@
           </p>
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script setup lang="ts">
