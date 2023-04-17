@@ -41,7 +41,33 @@ export default {
       title: "EXPRIENCE",
       items: [
         {
-          title: "Terminal101(booking)",
+          title: "Trader4 (finance)",
+          job: "Front-End Teamlead",
+          time: "Janaury 2023 - Current",
+          description:
+            "For first time we introduce subscription plan to level up your trading by accessing basket of trading softwares.",
+          tech: `Nuxt3, Vue3, NPM, Vitepress, Vite, Metronic, Nuxt-Content , Typescript , SSG, SSR, CSR,TeamLeadership, Nodejs, GIT,Socket`,
+          projects: [
+            {
+              name: "Trader4",
+              url: "https://trader4.net/",
+              logo: "trader4/trader4.svg",
+            },
+            {
+              name: "Bulutly",
+              url: "https://bulutly.net/",
+              logo: "trader4/bulutly.png",
+            },
+            {
+              name: "Werify",
+              url: "https://docs.werify.net/en/",
+              logo: "trader4/werify.svg",
+            },
+
+          ],
+        },
+        {
+          title: "Terminal101 (booking)",
           job: "Front-End Teamlead",
           time: "October 2021 - Janaury 2023",
           description:
@@ -50,18 +76,64 @@ export default {
           SSR , CSR , BootstrapVue , Nuxt-i18n,Nuxtjs/axios,
           Jest , Vuex , Nuxt-18n , Figma ,
           GitLab,Jira ,ComponentFlow,UnitTesting,Socket-IO,FireBase,VeeValidate,gsap...`,
+          projects: [
+            {
+              name: "Terminal 101",
+              url: "https://www.terminal101.co/",
+              logo: "terminal101/terminal101.svg",
+            },
+            {
+              name: "Dussfand",
+              url: "https://dassfund.com/",
+              logo: "terminal101/dassfund.svg",
+            },
+
+          ],
         },
         {
           title: "OpenSourcesProjects",
-          job: "Npm Package Creator",
+          job: "Npm Package Creator , Github Maintainer",
           time: "October 2021 - Current",
           description:
-            "Create Open Source packages for vue and ... and published on Npm",
-          tech: "vite,vue3,rollup,typescript,vue-press,npm,github,docemention,...",
+            "Create Open Source packages for vue,javascript, and ... and published on Npm",
+          tech: "Vite,Vue3,Angular,Nuxt3,Firebase,Javascript,Tailwind,Rollup,Typescript,Vue-press,NPM,Github,Docemention,UnitTest,...",
+          pinned: true,
+          projects: [
+            {
+              name: "Vue3 Form Wizard",
+              url: "https://www.npmjs.com/package/vue3-form-wizard",
+              logo: "open-source-projects/vue3-form-wizard.png",
+            },
+            {
+              name: "Vue Client Recaptcha",
+              url: "https://vue-client-recaptcha.netlify.app/",
+              logo: "open-source-projects/vue-client-recaptcha.png",
+            },
+            {
+              name: "Helping Js",
+              url: "https://helping-js.netlify.app/",
+              logo: "open-source-projects/helping-js.png",
+            },
+            {
+              name: "Parsa Jiravand",
+              url: "https://parsajiravand.netlify.app/",
+              logo: "open-source-projects/parsa-jiravand.png",
+            },
+            {
+              name: "Ng Clips",
+              url: "https://ng-clips.netlify.app/",
+              logo: "open-source-projects/ng-clips.png",
+            },
+            {
+              name: "Piaraam",
+              url: "https://piaraam.web.app/",
+              logo: "open-source-projects/piaraam.png",
+            },
+          ],
         },
 
         {
-          title: "Binex(exchange)",
+          title: "Binex (exchange)",
           job: "Front-End-Developer(Nuxt)",
           time: "April 2021 - May 2022",
           description: "Secure purchase and sale of digital currencies",
@@ -69,6 +141,19 @@ export default {
           SSR , CSR , BootstrapVue ,
           Jest , Vuex , Nuxt-18n , Figma ,
           GitLab ,...`,
+          projects: [
+            {
+              name: "Binex",
+              url: "https://binex.online/",
+              logo: "binex/binex.svg",
+            },
+            {
+              name: "Binex Panel",
+              url: "https://panel.binex.online/login",
+              logo: "binex/binex.svg",
+            },
+
+          ],
         },
         {
           title: "Dibaanzh(educational)",

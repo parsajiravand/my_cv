@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@nuxt/image-edge',
     "@nuxtjs/tailwindcss",
     "@kevinmarrec/nuxt-pwa",
     "@nuxt/devtools",
