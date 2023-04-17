@@ -56,7 +56,7 @@
                 preload
                 :alt="project.name"
                 width="65px"
-                height="65px"
+                height="60px"
                 format="webp"
                 fit="fill"
               />
