@@ -32,11 +32,15 @@
       <a href="https://parsajiravand.netlify.app/" target="_blank"
         >© {{ getYear }} | ParsaJiravand
       </a>
+      <div>
+        <small>Version {{ version }}</small>
+      </div>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
+import { version } from "../package.json";
 const contact = [
   { key: 0, icon: "fa-phone", value: "+989166320277" },
   { key: 1, icon: "fa-google", value: "parsajiravand@gmail.com" },
