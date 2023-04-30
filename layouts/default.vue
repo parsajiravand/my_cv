@@ -6,6 +6,11 @@
       <Meta name="description" :content="description" />
       <Meta name="og:description" :content="description" />
       <Meta name="twitter:description" :content="description" />
+      <Link
+        rel="alternate"
+        :hreflang="locale"
+        :href="`${host}${locale !== 'en' ? `/${locale}` : ''}`"
+      />
       <Meta
         :name="meta.name"
         :content="meta.content"
@@ -113,6 +118,16 @@ const metaList = computed(() => [
   },
 ]);
 
+let host:string|undefined = "";
+const nuxtApp = useNuxtApp();
+if (process.server) {
+  // for 3.0.0.rc_vercions: host = nuxtApp.ssrContext.req.headers.host
+  // UPD 27.01.23:
+  host = nuxtApp.ssrContext?.event.node.req.headers.host;
+
+} else {
+  host = window.location.host;
+}
 onMounted(() => {
   /* default nuxt color mode is system */
   const color = localStorage.getItem("nuxt-color-mode");
