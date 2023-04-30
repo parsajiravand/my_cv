@@ -59,7 +59,7 @@
                 />
               </div>
 
-              <div class="">
+              <div class="text-blue-600">
                 {{ project.name }}
               </div>
             </a>
