@@ -5,11 +5,7 @@
         {{ t("home.aboutMe.title") }}
       </h4>
       <p class="leading-relaxed">
-        {{
-          t("home.aboutMe.description", {
-            year: yearsWork,
-          })
-        }}
+        {{ t("home.aboutMe.description") }}
       </p>
     </div>
     <div class="py-5 mt-5 relative">

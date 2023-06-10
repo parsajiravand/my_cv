@@ -93,7 +93,7 @@ const head = useLocaleHead({
 // meta tags for seo and social media  and more
 // setup meta tags dynamically
 const title = computed(() => t("meta.title", { title: route.meta.title }));
-const description = computed(() => t("meta.description", { year: yearsWork }));
+const description = computed(() => t("meta.description"));
 const metaList = computed(() => [
   { name: "viewport", content: "width=device-width, initial-scale=1" },
   { name: "theme-color", content: "#ffffff" },
