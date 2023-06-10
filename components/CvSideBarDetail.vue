@@ -89,7 +89,7 @@
         {{ t("home.social.title") }}
       </h4>
       <div v-for="(item, index) in socials" :key="index" class="">
-        <a :href="item.address" target="_blank" class="flex">
+        <a :href="item.address" target="_blank" class="flex hover:text-blue-600 ">
           <i
             :class="['fa text-2xl text-blue-900 dark:text-gray-50', item.icon]"
           />

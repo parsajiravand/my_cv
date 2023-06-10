@@ -34,10 +34,10 @@
         <p>
           {{ item.description }}
         </p>
-        <p class="mt-5 font-medium">
+        <p class="mt-5 font-medium mb-4">
           <span class="font-bold"> Technologies : </span> &nbsp;
           <img
-            class="inline-block mx-1 rounded-md shadow-md my-1"
+            class="inline-block mx-1 rounded-md shadow-md my-1 opacity-90 "
             v-for="tech in item.tech"
             :key="tech"
             :src="tech.path"
