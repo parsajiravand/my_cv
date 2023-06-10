@@ -4,23 +4,47 @@
       <h4 class="font-medium text-2xl mb-2">
         {{ t("home.contact.title") }}
       </h4>
-      <div
-        v-for="(item, index) in contact"
-        :key="index"
-        class="grid grid-cols-12"
-      >
+      <div class="grid grid-cols-12 font-semibold">
         <i
-          :class="['fa text-2xl text-blue-900 dark:text-gray-50', item.icon]"
+          :class="['fa text-2xl text-blue-900 dark:text-gray-50', 'fa-phone']"
         />
-        <span class="col-span-11 md:col-span-10 mt-1 lg:mr-2"
-          >{{ item.value }}
+        <a
+          href="tel:+989166320277"
+          class="col-span-11 md:col-span-10 mt-1 lg:mr-2"
+          >+98-9166320277
 
           <!-- Comment this section when phone already call -->
           <!-- <small v-show="index===0" class="text-red-500 font-bold">Please Call Me On WhatsApp</small></span> -->
-        </span>
+        </a>
+      </div>
+      <div class="grid grid-cols-12 font-semibold">
+        <i
+          :class="['fa text-2xl text-blue-900 dark:text-gray-50', 'fa-google']"
+        />
+        <a
+          href="mailto:parsajiravand@gmail.com"
+          class="col-span-11 md:col-span-10 mt-1 lg:mr-2"
+          >parsajiravand@gmail.com
+
+          <!-- Comment this section when phone already call -->
+          <!-- <small v-show="index===0" class="text-red-500 font-bold">Please Call Me On WhatsApp</small></span> -->
+        </a>
+      </div>
+      <div class="grid grid-cols-12 font-semibold mx-1">
+        <i
+          :class="[
+            'fa text-2xl text-blue-900 dark:text-gray-50',
+            'fa-map-marker',
+          ]"
+        />
+        <a class="col-span-11 md:col-span-10 mt-1 lg:mr-2"
+          >Iran,Karaj
+          <!-- Comment this section when phone already call -->
+          <!-- <small v-show="index===0" class="text-red-500 font-bold">Please Call Me On WhatsApp</small></span> -->
+        </a>
       </div>
     </div>
-    <div class="cv_side_skills mt-10">
+    <div class="cv_side_skills mt-10" v-show="skills.length">
       <h4 class="font-medium text-2xl mb-4">
         {{ t("home.skills.title") }}
       </h4>
@@ -89,7 +113,11 @@
         {{ t("home.social.title") }}
       </h4>
       <div v-for="(item, index) in socials" :key="index" class="">
-        <a :href="item.address" target="_blank" class="flex hover:text-blue-600 ">
+        <a
+          :href="item.address"
+          target="_blank"
+          class="flex hover:text-blue-600"
+        >
           <i
             :class="['fa text-2xl text-blue-900 dark:text-gray-50', item.icon]"
           />
@@ -97,7 +125,7 @@
         </a>
       </div>
     </div>
-   <!--  <div class="py-5 mt-5">
+    <!--  <div class="py-5 mt-5">
       <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white">
         {{ t("home.projects.title") }}
       </h4>
