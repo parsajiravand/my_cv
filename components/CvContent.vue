@@ -19,7 +19,7 @@
       >
         <span v-if="item.pinned">
           <i
-            class="fa fa-thumb-tack fa-2x rotate-45 absolute right-5 text-gray-700 dark:text-gray-100"
+            class="fa fa-thumb-tack fa-2x rotate-45 absolute ltr:right-5 rtl:left-5 text-gray-700 dark:text-gray-100"
           ></i>
         </span>
         <p class="font-extrabold text-lg text-blue-800 dark:text-white">
@@ -36,7 +36,7 @@
         </p>
         <p class="mt-5 font-medium mb-4">
           <span class="font-bold"> Technologies : </span> &nbsp;
-          <img
+          <nuxt-img
             class="inline-block mx-1 rounded-md shadow-md my-1 opacity-90 "
             v-for="tech in item.tech"
             :key="tech"

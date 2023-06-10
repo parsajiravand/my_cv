@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="cv_side_contact">
+  <div class="rtl:text-right">
+    <div class="cv_side_contact ">
       <h4 class="font-medium text-2xl mb-2">
         {{ t("home.contact.title") }}
       </h4>
