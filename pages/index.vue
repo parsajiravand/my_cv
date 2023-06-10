@@ -11,7 +11,7 @@
           class="cv_side text-left shadow-inner bg-blue-50 dark:bg-blue-900 px-6 lg:px-10 py-10 mt-5 rounded-2xl"
         >
           <CvSideBarDetail
-            :contact="contact"
+            :contact="[]"
             :skills="[]"
             :languages="languages"
             :socials="socials"
@@ -41,11 +41,7 @@
 
 <script setup lang="ts">
 import { version } from "../package.json";
-const contact = [
-  { key: 0, icon: "fa-phone", value: "+989166320277" },
-  { key: 1, icon: "fa-google", value: "parsajiravand@gmail.com" },
-  { key: 3, icon: "fa-map-marker", value: "Iran,Karaj" },
-];
+
 // const skills = [
 //   "Vue",
 //   "Vue3",
