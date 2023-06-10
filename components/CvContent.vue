@@ -5,7 +5,11 @@
         {{ t("home.aboutMe.title") }}
       </h4>
       <p class="leading-relaxed">
-        {{ t("home.aboutMe.description") }}
+        {{
+          t("home.aboutMe.description", {
+            year: yearsWork,
+          })
+        }}
       </p>
     </div>
     <div class="py-5 mt-5 relative">
@@ -37,7 +41,7 @@
         <p class="mt-5 font-medium mb-4">
           <span class="font-bold"> Technologies : </span> &nbsp;
           <nuxt-img
-            class="inline-block mx-1 rounded-md shadow-md my-1 opacity-90 "
+            class="inline-block mx-1 rounded-md shadow-md my-1 opacity-90"
             v-for="tech in item.tech"
             :key="tech"
             :src="tech.path"
@@ -102,7 +106,7 @@
 </template>
 <script setup lang="ts">
 const { tm, t } = useI18n();
-
+const yearsWork = useGetWorkedYear();
 // show first pinned exprience
 const sortExprience = computed(() => {
   //@ts-ignore

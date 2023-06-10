@@ -2,7 +2,7 @@ export default {
   meta: {
     title: "Parsa Jiravand - Front-End Developer",
     description:
-      "Hi, my name is Parsa Jiravand. I have been programming for about 6 years. I worked with private start-ups and state-owned companies.",
+      "Hi, my name is Parsa Jiravand. I have been programming for about {year} years. I worked with private start-ups and state-owned companies.",
   },
   home: {
     firstName: "PARSA",
@@ -30,7 +30,7 @@ export default {
     },
     aboutMe: {
       title: "ABOUT ME",
-      description: `My name is Parsa Jiravand. I have been programming for about 6 years.
+      description: `My name is Parsa Jiravand. I have been programming for about {year} years.
                     I have worked with private start-ups and state-owned companies.
                     I believe coding structure is as important as coding alone , so I spending more hours thinking about structure of coding.
                     I like to do open-source world and helping others.
