@@ -5,7 +5,11 @@
         {{ t("home.aboutMe.title") }}
       </h4>
       <p class="leading-relaxed">
-        {{ t("home.aboutMe.description") }}
+        {{
+          t("home.aboutMe.description", {
+            year: yearsWork,
+          })
+        }}
       </p>
     </div>
     <div class="py-5 mt-5 relative">
@@ -19,7 +23,7 @@
       >
         <span v-if="item.pinned">
           <i
-            class="fa fa-thumb-tack fa-2x rotate-45 absolute right-5 text-gray-700 dark:text-gray-100"
+            class="fa fa-thumb-tack fa-2x rotate-45 absolute ltr:right-5 rtl:left-5 text-gray-700 dark:text-gray-100"
           ></i>
         </span>
         <p class="font-extrabold text-lg text-blue-800 dark:text-white">
@@ -34,8 +38,15 @@
         <p>
           {{ item.description }}
         </p>
-        <p class="mt-5 font-medium">
-          <span class="font-bold"> Technologies : </span> {{ item.tech }}
+        <p class="mt-5 font-medium mb-4">
+          <span class="font-bold"> Technologies : </span> &nbsp;
+          <nuxt-img
+            class="inline-block mx-1 rounded-md shadow-md my-1 opacity-90"
+            v-for="tech in item.tech"
+            :key="tech"
+            :src="tech.path"
+            :alt="tech.name"
+          />
         </p>
 
         <section
@@ -46,7 +57,11 @@
             :key="index"
             class="basis-1/2 grow-0 md:basis-1/4 m-2 p-2 shadow-inner rounded-lg cursor-pointer hover:shadow-lg text-gray-600 text-sm dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-300"
           >
-            <a class="flex flex-col justify-between h-full" target="_blank" :href="project.url">
+            <a
+              class="flex flex-col justify-between h-full"
+              target="_blank"
+              :href="project.url"
+            >
               <div>
                 <nuxt-img
                   class="mx-auto my-2"
@@ -54,12 +69,12 @@
                   loading="lazy"
                   preload
                   :alt="project.name"
-                  width="85"
-                  fit="fill"
+                  width="80"
+                  fit="contain"
                 />
               </div>
 
-              <div class="text-blue-600">
+              <div class="text-blue-600 font-semibold">
                 {{ project.name }}
               </div>
             </a>
@@ -91,7 +106,7 @@
 </template>
 <script setup lang="ts">
 const { tm, t } = useI18n();
-
+const yearsWork = useGetWorkedYear();
 // show first pinned exprience
 const sortExprience = computed(() => {
   //@ts-ignore

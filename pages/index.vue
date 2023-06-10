@@ -11,8 +11,8 @@
           class="cv_side text-left shadow-inner bg-blue-50 dark:bg-blue-900 px-6 lg:px-10 py-10 mt-5 rounded-2xl"
         >
           <CvSideBarDetail
-            :contact="contact"
-            :skills="skills"
+            :contact="[]"
+            :skills="[]"
             :languages="languages"
             :socials="socials"
           />
@@ -41,40 +41,36 @@
 
 <script setup lang="ts">
 import { version } from "../package.json";
-const contact = [
-  { key: 0, icon: "fa-phone", value: "+989166320277" },
-  { key: 1, icon: "fa-google", value: "parsajiravand@gmail.com" },
-  { key: 3, icon: "fa-map-marker", value: "Iran,Karaj" },
-];
-const skills = [
-  "Vue",
-  "Vue3",
-  "Nuxt",
-  "Javascript",
-  "Vuex",
-  "GraphQL",
-  "Tailwind",
-  "Boostrap",
-  "Html5",
-  "Css3",
-  "API",
-  "Sass",
-  "WebSocket",
-  "GIT",
-  "Vite",
-  "Npm",
-  "BootstrapVue",
-  "Typescript",
-  "Nodejs",
-  "Express",
-  "Quasar",
-  "Capasitor",
-  "VuePress",
-  "Nuxt3",
-  "VitePress",
-  "Angular",
-  "Rxjs",
-];
+
+// const skills = [
+//   "Vue",
+//   "Vue3",
+//   "Nuxt",
+//   "Javascript",
+//   "Vuex",
+//   "GraphQL",
+//   "Tailwind",
+//   "Boostrap",
+//   "Html5",
+//   "Css3",
+//   "API",
+//   "Sass",
+//   "WebSocket",
+//   "GIT",
+//   "Vite",
+//   "Npm",
+//   "BootstrapVue",
+//   "Typescript",
+//   "Nodejs",
+//   "Express",
+//   "Quasar",
+//   "Capasitor",
+//   "VuePress",
+//   "Nuxt3",
+//   "VitePress",
+//   "Angular",
+//   "Rxjs",
+// ];
 const languages = [
   { key: 0, percent: 80, name: "English" },
   { key: 1, percent: 100, name: "Persian" },

@@ -78,6 +78,9 @@ const colorMode = useColorMode();
 //route
 const route = useRoute();
 
+// get current year of my works
+const yearsWork = useGetWorkedYear();
+
 //i18n
 const { locale, t } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
@@ -90,7 +93,7 @@ const head = useLocaleHead({
 // meta tags for seo and social media  and more
 // setup meta tags dynamically
 const title = computed(() => t("meta.title", { title: route.meta.title }));
-const description = computed(() => t("meta.description"));
+const description = computed(() => t("meta.description", { year: yearsWork }));
 const metaList = computed(() => [
   { name: "viewport", content: "width=device-width, initial-scale=1" },
   { name: "theme-color", content: "#ffffff" },
@@ -118,13 +121,12 @@ const metaList = computed(() => [
   },
 ]);
 
-let host:string|undefined = "";
+let host: string | undefined = "";
 const nuxtApp = useNuxtApp();
 if (process.server) {
   // for 3.0.0.rc_vercions: host = nuxtApp.ssrContext.req.headers.host
   // UPD 27.01.23:
   host = nuxtApp.ssrContext?.event.node.req.headers.host;
-
 } else {
   host = window.location.host;
 }
