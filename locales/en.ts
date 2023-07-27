@@ -163,11 +163,6 @@ export default {
           ],
           projects: [
             {
-              name: "Trader4",
-              url: "https://trader4.net/",
-              logo: "trader4/trader4.svg",
-            },
-            {
               name: "Trader4 API",
               url: "https://github.com/traderfour/my-ts",
               logo: "trader4/trader4.svg",
@@ -176,11 +171,6 @@ export default {
               name: "Dalan",
               url: "https://dalan.capital/",
               logo: "trader4/dalan.png",
-            },
-            {
-              name: "Briofy",
-              url: "https://briofy.net/en",
-              logo: "trader4/briofy.svg",
             },
             {
               name: "Base Layers",
@@ -370,6 +360,14 @@ export default {
               path: "https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=white",
               name: "Firebase",
             },
+            {
+              path: "https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white",
+              name: "React",
+            },
+            {
+              path: "https://img.shields.io/badge/-Docusaurus-2F2E8B?style=flat-square&logo=docusaurus&logoColor=white",
+              name: "Docusaurus",
+            },
           ],
           pinned: true,
           projects: [
@@ -382,6 +380,11 @@ export default {
               name: "Vue Client Recaptcha",
               url: "https://vue-client-recaptcha.netlify.app/",
               logo: "open-source-projects/vue-client-recaptcha.png",
+            },
+            {
+              name: "React Form Wizard",
+              url: "https://react-form-wizard-component-document.netlify.app/",
+              logo: "open-source-projects/react-form-wizard-icon.png",
             },
             {
               name: "Helping Js",
