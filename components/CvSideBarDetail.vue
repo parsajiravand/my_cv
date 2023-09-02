@@ -1,6 +1,6 @@
 <template>
   <div class="rtl:text-right">
-    <div class="cv_side_contact ">
+    <div class="cv_side_contact">
       <h4 class="font-medium text-2xl mb-2">
         {{ t("home.contact.title") }}
       </h4>
@@ -49,13 +49,13 @@
         {{ t("home.skills.title") }}
       </h4>
       <ul class="flex flex-wrap">
-        <li
-          v-for="(item, index) in skills"
-          :key="index"
-          class="rounded-2xl mr-2 mb-3 text-xs font-semibold text-white px-2 py-1 bg-blue-900 dark:bg-blue-200 dark:text-gray-800"
-        >
-          {{ item }}
-        </li>
+        <nuxt-img
+          class="inline-block mx-1 rounded-md shadow-md my-1 opacity-90"
+          v-for="tech in skills"
+          :key="tech"
+          :src="tech.path"
+          :alt="tech.name"
+        />
       </ul>
     </div>
     <div class="cv_side_skills mt-10">
@@ -172,7 +172,12 @@ defineProps({
     required: false,
   },
   skills: {
-    type: Array as PropType<String[]>,
+    type: Array as PropType<
+      {
+        path: string;
+        name: string;
+      }[]
+    >,
     default: () => [],
     required: false,
   },
