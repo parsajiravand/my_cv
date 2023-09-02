@@ -12,7 +12,7 @@
         >
           <CvSideBarDetail
             :contact="[]"
-            :skills="[]"
+            :skills="skills"
             :languages="languages"
             :socials="socials"
           />
@@ -42,35 +42,158 @@
 <script setup lang="ts">
 import { version } from "../package.json";
 
-// const skills = [
-//   "Vue",
-//   "Vue3",
-//   "Nuxt",
-//   "Javascript",
-//   "Vuex",
-//   "GraphQL",
-//   "Tailwind",
-//   "Boostrap",
-//   "Html5",
-//   "Css3",
-//   "API",
-//   "Sass",
-//   "WebSocket",
-//   "GIT",
-//   "Vite",
-//   "Npm",
-//   "BootstrapVue",
-//   "Typescript",
-//   "Nodejs",
-//   "Express",
-//   "Quasar",
-//   "Capasitor",
-//   "VuePress",
-//   "Nuxt3",
-//   "VitePress",
-//   "Angular",
-//   "Rxjs",
-// ];
+const skills = [
+  {
+    path: "https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white",
+    name: "HTML5",
+  },
+  {
+    path: "https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3",
+    name: "CSS3",
+  },
+  {
+    path: "https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript",
+    name: "JavaScript",
+  },
+  {
+    path: "https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white",
+    name: "TypeScript",
+  },
+  {
+    path: "https://img.shields.io/badge/-Vue-4FC08D?style=flat-square&logo=vue.js&logoColor=white",
+    name: "Vue",
+  },
+  {
+    path: "https://img.shields.io/badge/-Nuxt-00C58E?style=flat-square&logo=nuxt.js&logoColor=white",
+    name: "Nuxt",
+  },
+  /* nuxt-content */
+  {
+    path: "https://img.shields.io/badge/-NuxtContent-00C58E?style=flat-square&logo=nuxt.js&logoColor=white",
+    name: "NuxtContent",
+  },
+  /*  SSG, SSR, CSR,TeamLeadership, Nodejs, GIT,Socket,Microfrontend,React,Next with diffrent color */
+  {
+    path: "https://img.shields.io/badge/-SSG-00C58E?style=flat-square&logoColor=white",
+    name: "SSG",
+  },
+  {
+    path: "https://img.shields.io/badge/-SSR-00C58E?style=flat-square&logoColor=white",
+    name: "SSR",
+  },
+  {
+    path: "https://img.shields.io/badge/-CSR-007ACC?style=flat-square&logoColor=white",
+    name: "CSR",
+  },
+  {
+    path: "https://img.shields.io/badge/-TeamLeadership-007ACC?style=flat-square&logoColor=white",
+    name: "TeamLeadership",
+  },
+  {
+    path: "https://img.shields.io/badge/-Nodejs-339933?style=flat-square&logo=Node.js&logoColor=white",
+    name: "Nodejs",
+  },
+  //nestjs
+  {
+    path: "https://img.shields.io/badge/-Nestjs-C21325?style=flat-square&logo=Nestjs&logoColor=white",
+    name: "Nestjs",
+  },
+  //express
+  {
+    path: "https://img.shields.io/badge/-Express-339933?style=flat-square&logo=Express&logoColor=white",
+    name: "Express",
+  },
+  {
+    path: "https://img.shields.io/badge/-Microfrontend-339933?style=flat-square&logo=Microfrontend&logoColor=white",
+    name: "Microfrontend",
+  },
+  //angular
+  {
+    path: "https://img.shields.io/badge/-Angular-DD0031?style=flat-square&logo=Angular&logoColor=white",
+    name: "Angular",
+  },
+  {
+    path: "https://img.shields.io/badge/-React-007ACC?style=flat-square&logo=React&logoColor=white",
+    name: "React",
+  },
+
+  {
+    path: "https://img.shields.io/badge/-Next-007ACC?style=flat-square&logo=Next&logoColor=white",
+    name: "Next",
+  },
+
+  {
+    path: "https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white",
+    name: "Vite",
+  },
+  {
+    path: "https://img.shields.io/badge/-Npm-CB3837?style=flat-square&logo=npm&logoColor=white",
+    name: "Npm",
+  },
+  {
+    path: "https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white",
+    name: "Git",
+  },
+  {
+    path: "https://img.shields.io/badge/-Github-181717?style=flat-square&logo=github",
+    name: "Github",
+  },
+  {
+    path: "https://img.shields.io/badge/-Gitlab-FCA121?style=flat-square&logo=gitlab",
+    name: "Gitlab",
+  },
+  {
+    path: "https://img.shields.io/badge/-Jest-C21325?style=flat-square&logo=jest&logoColor=white",
+    name: "Jest",
+  },
+  {
+    path: "https://img.shields.io/badge/-GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white",
+    name: "GraphQL",
+  },
+  {
+    path: "https://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=sass&logoColor=white",
+    name: "Sass",
+  },
+  {
+    path: "https://img.shields.io/badge/-Bootstrap-563D7C?style=flat-square&logo=bootstrap&logoColor=white",
+    name: "Bootstrap",
+  },
+  {
+    path: "https://img.shields.io/badge/-Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white",
+    name: "Tailwind",
+  },
+  {
+    path: "https://img.shields.io/badge/-Vitepress-646CFF?style=flat-square&logo=vite&logoColor=white",
+    name: "Vitepress",
+  },
+  {
+    path: "https://img.shields.io/badge/-Socket_IO-010101?style=flat-square&logo=socket.io&logoColor=white",
+    name: "Socket-IO",
+  },
+  {
+    path: "https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black",
+    name: "FireBase",
+  },
+  {
+    path: "https://img.shields.io/badge/-VeeValidate-FFAA2C?style=flat-square&logo=vue.js&logoColor=white",
+    name: "VeeValidate",
+  },
+  // element ui
+  {
+    path: "https://img.shields.io/badge/-ElementUI-409EFF?style=flat-square&logo=element-ui&logoColor=white",
+    name: "ElementUI",
+  },
+  // vuetify
+  {
+    path: "https://img.shields.io/badge/-Vuetify-1867C0?style=flat-square&logo=vuetify&logoColor=white",
+    name: "Vuetify",
+  },
+  // quasar
+  {
+    path: "https://img.shields.io/badge/-Quasar-1976D2?style=flat-square&logo=quasar&logoColor=white",
+    name: "Quasar",
+  },
+];
 const languages = [
   { key: 0, percent: 80, name: "English" },
   { key: 1, percent: 100, name: "Persian" },
@@ -85,7 +208,7 @@ const socials = [
   {
     key: 1,
     icon: "fa-linkedin",
-    address: "https://www.linkedin.com/in/parsa-jiravand-16704a1a6/",
+    address: "https://www.linkedin.com/in/parsa-jiravand",
     name: "parsa-jiravand",
   },
   {

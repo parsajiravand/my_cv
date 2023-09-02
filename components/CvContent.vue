@@ -34,7 +34,7 @@
         <p>
           {{ item.description }}
         </p>
-        <p class="mt-5 font-medium mb-4">
+        <!-- <p class="mt-5 font-medium mb-4">
           <span class="font-bold"> Technologies : </span> &nbsp;
           <nuxt-img
             class="inline-block mx-1 rounded-md shadow-md my-1 opacity-90"
@@ -43,7 +43,7 @@
             :src="tech.path"
             :alt="tech.name"
           />
-        </p>
+        </p> -->
 
         <section
           class="flex flex-row flex-wrap my-2 justify-center text-center"
@@ -51,7 +51,7 @@
           <div
             v-for="(project, index) in item.projects"
             :key="index"
-            class="basis-1/2 grow-0 md:basis-1/4 m-2 p-2 shadow-inner rounded-lg cursor-pointer hover:shadow-lg text-gray-600 text-sm dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-300"
+            class="basis-1/2 grow-0 md:basis-1/4 m-1 p-2 shadow-inner rounded-lg cursor-pointer hover:shadow-lg text-gray-600 text-sm dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-300"
           >
             <a
               class="flex flex-col justify-between h-full"
@@ -60,12 +60,12 @@
             >
               <div>
                 <nuxt-img
-                  class="mx-auto my-2"
+                  class="mx-auto my-1"
                   :src="`/img/${project.logo}`"
                   loading="lazy"
                   preload
                   :alt="project.name"
-                  width="80"
+                  width="50"
                   fit="contain"
                 />
               </div>
@@ -78,26 +78,7 @@
         </section>
       </div>
     </div>
-    <div class="py-5 mt-5">
-      <h4 class="font-normal text-2xl mb-4 text-blue-800">
-        {{ t("home.ecucation.title") }}
-      </h4>
-      <div
-        v-for="(item,index) in tm('home.ecucation.items' as string)"
-        :key="index"
-        class="mt-8"
-      >
-        <p class="font-bold text-lg text-blue-800 dark:text-white">
-          {{ item.title }}
-        </p>
-        <p class="font-normal text-md mb-2 text-blue-700 dark:text-white">
-          {{ item.time }}
-        </p>
-        <p>
-          {{ item.description }}
-        </p>
-      </div>
-    </div>
+
   </div>
 </template>
 <script setup lang="ts">

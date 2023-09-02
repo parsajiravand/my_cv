@@ -1,6 +1,6 @@
 <template>
   <div class="rtl:text-right">
-    <div class="cv_side_contact ">
+    <div class="cv_side_contact">
       <h4 class="font-medium text-2xl mb-2">
         {{ t("home.contact.title") }}
       </h4>
@@ -49,13 +49,13 @@
         {{ t("home.skills.title") }}
       </h4>
       <ul class="flex flex-wrap">
-        <li
-          v-for="(item, index) in skills"
-          :key="index"
-          class="rounded-2xl mr-2 mb-3 text-xs font-semibold text-white px-2 py-1 bg-blue-900 dark:bg-blue-200 dark:text-gray-800"
-        >
-          {{ item }}
-        </li>
+        <nuxt-img
+          class="inline-block m-1 h-6 rounded-md shadow-md my-1 opacity-90"
+          v-for="tech in skills"
+          :key="tech"
+          :src="tech.path"
+          :alt="tech.name"
+        />
       </ul>
     </div>
     <div class="cv_side_skills mt-10">
@@ -125,6 +125,26 @@
         </a>
       </div>
     </div>
+    <div class="py-5 mt-5">
+      <h4 class="font-normal text-2xl mb-4 text-blue-800">
+        {{ t("home.ecucation.title") }}
+      </h4>
+      <div
+        v-for="(item,index) in tm('home.ecucation.items' as string)"
+        :key="index"
+        class="mt-8"
+      >
+        <p class="font-bold text-lg text-blue-800 dark:text-white">
+          {{ item.title }}
+        </p>
+        <p class="font-normal text-md mb-2 text-blue-700 dark:text-white">
+          {{ item.time }}
+        </p>
+        <p>
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
     <!--  <div class="py-5 mt-5">
       <h4 class="font-normal text-2xl mb-4 text-blue-800 dark:text-white">
         {{ t("home.projects.title") }}
@@ -172,7 +192,12 @@ defineProps({
     required: false,
   },
   skills: {
-    type: Array as PropType<String[]>,
+    type: Array as PropType<
+      {
+        path: string;
+        name: string;
+      }[]
+    >,
     default: () => [],
     required: false,
   },
