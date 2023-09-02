@@ -50,7 +50,7 @@
       </h4>
       <ul class="flex flex-wrap">
         <nuxt-img
-          class="inline-block mx-1 rounded-md shadow-md my-1 opacity-90"
+          class="inline-block m-1 h-6 rounded-md shadow-md my-1 opacity-90"
           v-for="tech in skills"
           :key="tech"
           :src="tech.path"
@@ -123,6 +123,26 @@
           />
           <span class="mt-1 mx-3">{{ item.name }}</span>
         </a>
+      </div>
+    </div>
+    <div class="py-5 mt-5">
+      <h4 class="font-normal text-2xl mb-4 text-blue-800">
+        {{ t("home.ecucation.title") }}
+      </h4>
+      <div
+        v-for="(item,index) in tm('home.ecucation.items' as string)"
+        :key="index"
+        class="mt-8"
+      >
+        <p class="font-bold text-lg text-blue-800 dark:text-white">
+          {{ item.title }}
+        </p>
+        <p class="font-normal text-md mb-2 text-blue-700 dark:text-white">
+          {{ item.time }}
+        </p>
+        <p>
+          {{ item.description }}
+        </p>
       </div>
     </div>
     <!--  <div class="py-5 mt-5">

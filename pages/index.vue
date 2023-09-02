@@ -56,7 +56,7 @@ const skills = [
     name: "JavaScript",
   },
   {
-    path: "https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript",
+    path: "https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white",
     name: "TypeScript",
   },
   {
@@ -178,9 +178,20 @@ const skills = [
     path: "https://img.shields.io/badge/-VeeValidate-FFAA2C?style=flat-square&logo=vue.js&logoColor=white",
     name: "VeeValidate",
   },
+  // element ui
   {
-    path: "https://img.shields.io/badge/-gsap-47CF73?style=flat-square&logo=greensock&logoColor=white",
-    name: "gsap",
+    path: "https://img.shields.io/badge/-ElementUI-409EFF?style=flat-square&logo=element-ui&logoColor=white",
+    name: "ElementUI",
+  },
+  // vuetify
+  {
+    path: "https://img.shields.io/badge/-Vuetify-1867C0?style=flat-square&logo=vuetify&logoColor=white",
+    name: "Vuetify",
+  },
+  // quasar
+  {
+    path: "https://img.shields.io/badge/-Quasar-1976D2?style=flat-square&logo=quasar&logoColor=white",
+    name: "Quasar",
   },
 ];
 const languages = [
@@ -197,7 +208,7 @@ const socials = [
   {
     key: 1,
     icon: "fa-linkedin",
-    address: "https://www.linkedin.com/in/parsa-jiravand-16704a1a6/",
+    address: "https://www.linkedin.com/in/parsa-jiravand",
     name: "parsa-jiravand",
   },
   {

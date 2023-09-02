@@ -1,13 +1,13 @@
 export default {
   meta: {
-    title: "Parsa Jiravand - Front-End Developer",
+    title: "Parsa Jiravand - Full Stack Developer",
     description:
       "Hi, my name is Parsa Jiravand. I have been programming for about 6 years. I worked with private start-ups and state-owned companies.",
   },
   home: {
     firstName: "PARSA",
     lastName: "JIRAVAND",
-    career: "FRONT-END DEVELOPER",
+    career: "FULL STACK DEVELOPER",
     contact: {
       title: "CONTACT",
     },
@@ -43,15 +43,15 @@ export default {
         {
           title: "Trader4 (finance)",
           job: "Front-End Teamlead",
-          time: "Janaury 2023 - Current",
+          time: "Janaury 2023 - July 2023 ",
           description:
             "For first time we introduce subscription plan to level up your trading by accessing basket of trading softwares.",
           /* convert all this tech to tag : like open source section Nuxt3, Vue3, NPM, Vitepress, Vite, Metronic, Nuxt-Content , Typescript , SSG, SSR, CSR,TeamLeadership, Nodejs, GIT,Socket,Microfrontend,React,Next,Npm package */
 
           projects: [
             {
-              name: "Trader4 API",
-              url: "https://github.com/traderfour/my-ts",
+              name: "Trader4",
+              url: "https://github.com/traderfour/",
               logo: "trader4/trader4.svg",
             },
             {
@@ -60,9 +60,14 @@ export default {
               logo: "trader4/dalan.png",
             },
             {
-              name: "Base Layers",
-              url: "https://github.com/Briofy/base-layers",
+              name: "Briofy",
+              url: "https://github.com/Briofy/",
               logo: "trader4/briofy.svg",
+            },
+            {
+              name: "Bulutly",
+              url: "https://github.com/Bulutly/bulutly.net",
+              logo: "trader4/bulutly.png",
             },
           ],
         },
