@@ -2,9 +2,15 @@
   <div>
     <a href="https://parsajiravand.netlify.app/" target="_blank">
       <img
-        class="w-40 h-40 rounded-full mx-auto"
+        class="rounded-full mx-auto"
         src="/img/parsa-jiravand-min.jpg"
         alt="parsa jiravand"
+        style="
+          width: 220px;
+          height: 220px;
+          object-fit: cover;
+          object-position: center;
+        "
       />
     </a>
     <h1 class="font-bold text-4xl text-blue-800 dark:text-white my-4">

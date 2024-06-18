@@ -7,7 +7,7 @@ export default {
   home: {
     firstName: "PARSA",
     lastName: "JIRAVAND",
-    career: "FULL STACK DEVELOPER",
+    career: "Front-End Developer",
     contact: {
       title: "CONTACT",
     },
@@ -30,7 +30,7 @@ export default {
     },
     aboutMe: {
       title: "ABOUT ME",
-      description: `My name is Parsa Jiravand. I have been programming for about 6 years.
+      description: `My name is Parsa Jiravand. I have been programming for about 7 years.
                     I have worked with private start-ups and state-owned companies.
                     I believe coding structure is as important as coding alone , so I spending more hours thinking about structure of coding.
                     I like to do open-source world and helping others.
@@ -40,6 +40,51 @@ export default {
     experience: {
       title: "EXPRIENCE",
       items: [
+        {
+          title: "Supply Sustain (Software as a service (SaaS))",
+          job: "Senior Front-End Developer",
+          time: "July 2023 - June 2024",
+          description:
+            "Search among thousands of tenders, buyers, suppliers, communicate and meet your company's.",
+          /* convert all this tech to tag : like open source section Nuxt3, Vue3, NPM, Vitepress, Vite, Metronic, Nuxt-Content , Typescript , SSG, SSR, CSR,TeamLeadership, Nodejs, GIT,Socket,Microfrontend,React,Next,Npm package */
+          projects: [
+            {
+              name: "Supply Sustain",
+              url: "https://supplysustain.com/",
+              logo: "supply-sustain/logo.svg",
+            },
+          ],
+        },
+        {
+          title: "Fx24 (Broker)",
+          job: "Senior Front-End Developer (Part Time)",
+          time: "February 2024 - Current ",
+          description:
+            "Fx24 is a broker that helps you to trade in the forex market. Meta Trader 4 and Meta Trader 5 are the main platforms that you can use to trade.",
+          /* convert all this tech to tag : like open source section Nuxt3, Vue3, NPM, Vitepress, Vite, Metronic, Nuxt-Content , Typescript , SSG, SSR, CSR,TeamLeadership, Nodejs, GIT,Socket,Microfrontend,React,Next,Npm package */
+          projects: [
+            {
+              name: "Fx24",
+              url: "https://app.fx24broker.com/",
+              logo: "fx24/logo.svg",
+            },
+          ],
+        },
+        {
+          title: "Fitamoon (Fitness)",
+          job: "Senior Front-End Developer (Part Time)",
+          time: "January 2024 - Current ",
+          description:
+            "Fitamoon is a fitness app that helps you to track your daily activities and your diet.",
+          /* convert all this tech to tag : like open source section Nuxt3, Vue3, NPM, Vitepress, Vite, Metronic, Nuxt-Content , Typescript , SSG, SSR, CSR,TeamLeadership, Nodejs, GIT,Socket,Microfrontend,React,Next,Npm package */
+          projects: [
+            {
+              name: "Fitamoon",
+              url: "https://fitamoon.com/",
+              logo: "fitamoon/logo.png",
+            },
+          ],
+        },
         {
           title: "Trader4 (finance)",
           job: "Front-End Teamlead",
@@ -81,7 +126,7 @@ export default {
           projects: [
             {
               name: "Terminal 101",
-              url: "https://www.terminal101.co/",
+              url: "https://www.tadilo.com/",
               logo: "terminal101/terminal101.svg",
             },
             {
@@ -131,10 +176,15 @@ export default {
               logo: "open-source-projects/ng-clips.png",
             },
             {
-              name: "Piaraam",
-              url: "https://piaraam.web.app/",
-              logo: "open-source-projects/piaraam.png",
+              name: "Nuxt Content Stand",
+              url: "Nuxt Content Stand",
+              logo: "open-source-projects/parsa-jiravand.png",
             },
+            // {
+            //   name: "Piaraam",
+            //   url: "https://piaraam.web.app/",
+            //   logo: "open-source-projects/piaraam.png",
+            // },
           ],
         },
 
